@@ -120,6 +120,7 @@
         height: fit-content;
         z-index: 3;
         font-size: 30px;
+        color: #E8535B;
     }
 
     #start_btn{
@@ -199,16 +200,14 @@
 
 <script>
 
-    var array = ["A", "B", "C", "D", "E", "F"]; // ["F", "A", "B", "C", "D", "E"]
+    var array = ["A", "B", "C", "D", "E", "F"];
 
     var myInterval = null;
 
     function replaceValues() {
-        // change the array
         let lastValue = array.pop();
         array.unshift(lastValue);
 
-        // update the elements
         $("#value1").text(array[0]);
         $("#value2").text(array[1]);
         $("#value3").text(array[2]);
@@ -218,11 +217,11 @@
     }
 
     $("#start_btn").on("click", () => {
-        myInterval = setInterval(replaceValues, 2000);
+        myInterval=setInterval(replaceValues, 2000)
     });
 
     $("#stop_btn").on("click", () => {
-        clearInterval(myInterval);
+        clearInterval(myInterval)
     });
 
 
