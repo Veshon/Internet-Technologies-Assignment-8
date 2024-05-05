@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        section{
+            display: flex;
+        }
+
+        .box{
+            width: 100px;
+            height: 45px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .red{
+            background: red;
+        }
+
+        .green{
+            background: green;
+        }
+
+        .pink{
+            background: deeppink;
+        }
+
+        .orange{
+            background: orange;
+        }
+
+        .yellow{
+            background: yellow;
+        }
+
+        .blue{
+            background: blue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<section>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+</section>
+
+<script src="assets/lib/jquery-3.7.1.min.js"></script>
+
+<script>
+
+    var current_light_index = 0;
+    var max_light_index = 6;
+
+    var move = "RIGHT";
+
+
+    function change() {
+        $(".box").removeClass("red");
+        $(".box").removeClass("green");
+        $(".box").removeClass("pink");
+        $(".box").removeClass("orange");
+        $(".box").removeClass("yellow");
+        $(".box").removeClass("blue");
+
+
+        $(".box").eq(current_light_index).addClass("red");
+
+        if(move==="RIGHT") {
+            if(current_light_index!==0) $(".box").eq(current_light_index-1).addClass("green");
+
+            ++current_light_index;
+            if(current_light_index>max_light_index - 2) {
+                move = "LEFT";
+            }
+
+        } else {
+            $(".box").eq(current_light_index+1).addClass("green");
+
+            --current_light_index;
+            if(current_light_index===0) {
+                move = "RIGHT";
+            }
+        }
+
+    }
+
+    setInterval(change, 500)
+
+</script>
+
+</body>
+</html>
