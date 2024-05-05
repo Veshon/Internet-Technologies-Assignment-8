@@ -17,7 +17,7 @@
             border-radius: 10px;
             position: relative;
             top: 200px;
-            left: 400px;
+            left: 500px;
         }
 
         .red{
@@ -47,13 +47,40 @@
         #box1{
             position: absolute;
             top: 150px;
-            left: 300px;
+            left: 400px;
         }
 
         #box6{
             position: absolute;
             top: 260px;
-            left: 830px;
+            left: 930px;
+        }
+
+
+        #startBtn{
+            width: 70px;
+            height: 30px;
+            position: absolute;
+            top: 350px;
+            bottom: 0;
+            right: 0;
+            left: -40px;
+            margin: auto;
+            border-radius: 10px;
+            border-color: #F4FDFE;
+        }
+
+        #stopBtn{
+            width: 70px;
+            height: 30px;
+            position: absolute;
+            top: 350px;
+            bottom: 0;
+            right: 0;
+            left: 150px;
+            margin: auto;
+            border-radius: 10px;
+            border-color: #F4FDFE;
         }
 
     </style>
@@ -72,6 +99,9 @@
 
 </section>
 
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>
+
 <script src="assets/lib/jquery-3.7.1.min.js"></script>
 
 <script>
@@ -80,6 +110,8 @@
     var max_light_index = 6;
 
     var move = "RIGHT";
+
+    var myInterval2 = null;
 
 
     function change() {
@@ -122,7 +154,14 @@
 
     }
 
-    setInterval(change, 500)
+
+    $('#startBtn').on('click', () => {
+        myInterval2 = setInterval(change, 500)
+    })
+
+    $('#stopBtn').on('click', ()=>{
+        clearInterval(myInterval2)
+    })
 
 </script>
 
