@@ -95,6 +95,11 @@
 
         if(move==="RIGHT") {
             if(current_light_index!==0) $(".box").eq(current_light_index-1).addClass("green");
+            if(current_light_index!==0) $(".box").eq(current_light_index-2).addClass("yellow");
+            if(current_light_index!==0) $(".box").eq(current_light_index-3).addClass("pink");
+            if(current_light_index!==0) $(".box").eq(current_light_index-4).addClass("orange");
+            if(current_light_index!==0) $(".box").eq(current_light_index-5).addClass("blue");
+            if(current_light_index!==0) $(".box").eq(current_light_index-6).addClass("red");
 
             ++current_light_index;
             if(current_light_index>max_light_index - 2) {
@@ -103,6 +108,11 @@
 
         } else {
             $(".box").eq(current_light_index+1).addClass("green");
+            $(".box").eq(current_light_index+2).addClass("yellow");
+            $(".box").eq(current_light_index+3).addClass("pink");
+            $(".box").eq(current_light_index+4).addClass("orange");
+            $(".box").eq(current_light_index+5).addClass("blue");
+            $(".box").eq(current_light_index+6).addClass("red");
 
             --current_light_index;
             if(current_light_index===0) {
