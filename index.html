@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+
+    body{
+        background-color: #F4FDFE;
+    }
+
+    #man1>img{
+
+        width: 200px;
+        height: 180px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 1100px;
+        margin: auto;
+    }
+
+    #man2>img{
+
+        width: 200px;
+        height: 180px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 800px;
+        margin: auto;
+    }
+
+    #man3>img{
+
+        width: 200px;
+        height: 180px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 500px;
+        margin: auto;
+    }
+
+    #man4>img{
+
+        width: 200px;
+        height: 180px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 200px;
+        margin: auto;
+    }
+
+    #man5>img{
+
+        width: 200px;
+        height: 180px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: -100px;
+        margin: auto;
+    }
+
+    #man6>img{
+
+        width: 200px;
+        height: 180px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: -400px;
+        margin: auto;
+    }
+
+    #building{
+        width: 300px;
+        height: 300px;
+        position: relative;
+        top: 15vh;
+        z-index: 1;
+    }
+
+    section>div{
+        z-index: 1;
+    }
+
+
+    #boxes {
+        display: flex;
+        z-index: 3;
+    }
+
+    #boxes>div {
+        width: 50px;
+        aspect-ratio: 1/1;
+        margin: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        position: relative;
+        top: -130px;
+        left: 350px;
+    }
+
+    #boxes>div>div {
+        width: fit-content;
+        height: fit-content;
+        z-index: 3;
+        font-size: 30px;
+    }
+
+
+
+</style>
+
+<body>
+
+<section>
+    <div id="man1"><img src="assets/gif/IDvl.gif"></div>
+    <div id="man2"><img src="assets/gif/IDvl.gif"></div>
+    <div id="man3"><img src="assets/gif/IDvl.gif"></div>
+    <div id="man4"><img src="assets/gif/IDvl.gif"></div>
+    <div id="man5"><img src="assets/gif/IDvl.gif"></div>
+    <div id="man6"><img src="assets/gif/IDvl.gif"></div>
+</section>
+
+<div id="building"><img src="assets/images/360_F_226986354_sKD3f4tMM1ktIUz4oso0CjDL6aAgGV6z.jpg"></div>
+
+
+<section id="boxes">
+    <!--  box no: 1-->
+    <div>
+        <div id="value1">A</div>
+    </div>
+
+    <!--  box no: 2-->
+    <div>
+        <div id="value2">B</div>
+    </div>
+
+    <!--  box no: 3-->
+    <div>
+        <div id="value3">C</div>
+    </div>
+
+    <!--  box no: 4-->
+    <div>
+        <div id="value4">D</div>
+    </div>
+
+    <!--  box no: 5-->
+    <div>
+        <div id="value5">E</div>
+    </div>
+
+    <!--  box no: 6-->
+    <div>
+        <div id="value6">F</div>
+    </div>
+</section>
+
+<button type="button" id="start_btn">Start</button>
+<button type="button" id="stop_btn">Stop</button>
+
+</body>
+</html>
